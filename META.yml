@@ -22,6 +22,7 @@ meta-spec:
 name: Dicom-DCMTK-DCMDump-Simple
 no_index:
   directory:
+    - examples
     - inc
     - t
 requires:
