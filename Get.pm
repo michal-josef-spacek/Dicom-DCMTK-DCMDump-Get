@@ -24,10 +24,11 @@ sub new {
 	return $self;
 }
 
-# Parse.
-sub dcmdump {
+# Get dcmdump for DICOM file.
+sub get {
 	my ($self, $dicom_file) = @_;
-	my $dcmdump = system "dcmdump $dicom_file";
+	my $dcmdump = `dcmdump $dicom_file`;
+	chomp $dcmdump;
 	return $dcmdump;
 }
 
