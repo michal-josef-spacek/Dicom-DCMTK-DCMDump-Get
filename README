@@ -1,0 +1,84 @@
+NAME
+    Dicom::DCMTK::DCMDump::Get - Perl Class for getting DICOM DCMTK dcmdump
+    output for DICOM file.
+
+SYNOPSIS
+     use Dicom::DCMTK::DCMDump::Get;
+     my $obj = Dicom::DCMTK::DCMDump::Get->new(%parameters);
+     my $dcmdump = $obj->get($dicom_file);
+
+METHODS
+    "new(%parameters)"
+            Constructor.
+
+    "get($dicom_file)"
+             Get dcmdump for DICOM file.
+             Returns string with dcmdump output.
+
+ERRORS
+     new():
+             From Class::Utils::set_params():
+                     Unknown parameter '%s'.
+
+EXAMPLE
+     # Pragmas.
+     use strict;
+     use warnings;
+
+     # Modules.
+     use Dicom::DCMTK::DCMDump::Get;
+     use File::Temp qw(tempfile);
+     use IO::Barf qw(barf);
+     use MIME::Base64::Perl qw(decode_base64);
+
+     # Object.
+     my $obj = Dicom::DCMTK::DCMDump::Get->new;
+
+     # Fake DICOM file.
+     my $dicom_data = <<'END';
+     AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+     AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+     AAAAAAAAAAAAAAAAAABESUNNAgAAAFVMBADIAAAAAgABAE9CAAACAAAAAAECAAIAVUkaADEuMi4y
+     NzYuMC43MjMwMDEwLjMuMS4wLjEAAgADAFVJOAAxLjIuMjc2LjAuNzIzMDAxMC4zLjEuNC44MzIz
+     MzI5LjE5MTQ1LjE0MDkwNDI2NzUuODkyOTU4AAIAEABVSRQAMS4yLjg0MC4xMDAwOC4xLjIuMQAC
+     ABIAVUkcADEuMi4yNzYuMC43MjMwMDEwLjMuMC4zLjYuMAACABMAU0gQAE9GRklTX0RDTVRLXzM2
+     MCAIAAUAQ1MKAElTT19JUiAxMDAIAFAAU0gGADAwMDAwMAgAgABMTwYASUJTbW0gCACQAFBODgBT
+     aW5jbGFpcl5UeWxlcggAEBFTUQAAAAAAAAgAIBFTUQAAAAAAABAAEABQThAAVGVycmVsbF5TdGVw
+     aGVuIBAAIABMTwoAUDYyMzU1NjU5ORAAMABEQQgAMTk0MzAyMTEQAEAAQ1MCAE0gEAAAIExPCgBN
+     RVRBU1RBU0lTEAAQIUxPBgBUQU5UQUwQAABATFQQAFBhdGllbnQgY29tbWVudCAgAA0AVUkoADEu
+     My42LjEuNC4xLjM5MTkyLjEuMi4xLjEuMS4yLjE0MDkwNDI2NzUyADIQUE4MAEl2ZXJzXlN0ZXZl
+     bjIAYBBMTwYARVhBTTYgQAAAAVNRAAC0AAAA/v8A4KwAAAAIAGAAQ1MCAEVTMgBwEExPDABCQVJJ
+     VU1TVUxGQVRAAAEAQUUMAEhEX0NBUF8xMDgwIEAAAgBEQQgAMjAxNDA4MjZAAAMAVE0GADA4NTYw
+     N0AABgBQTgoAQ3Jvc3NeSmFja0AABwBMTwYARXhhbTQ3QAAJAFNICABTUEQzNDQ1IEAAEABTSAYA
+     U1RONDU2QAARAFNIBgBCMzRGNTZAABIATE8AAEAAAARMVAAAQABUAkxPJABQZXJmb3JtZWQgUHJv
+     Y2VkdXJlIFN0ZXAgRGVzY3JpcHRpb25AAAEQU0gMAFJQNDU0RzIzNCBva0AAAxBTSAQATE9XIA==
+     END
+     my (undef, $dicom_file) = tempfile();
+     barf($dicom_file, decode_base64($dicom_data));
+
+     # Get dcmdump output.
+     my $dcmdump = $obj->get($dicom_file);
+
+     # Print out.
+     print $dcmdump;
+
+     # Output:
+     # TODO
+
+DEPENDENCIES
+    Class::Utils.
+
+REPOSITORY
+    <https://github.com/tupinek/Dicom-DCMTK-DCMDump-Get>
+
+AUTHOR
+    Michal Špaček <mailto:skim@cpan.org>
+
+    <http://skim.cz>
+
+LICENSE AND COPYRIGHT
+    BSD license.
+
+VERSION
+    0.01
+
