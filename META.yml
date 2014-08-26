@@ -19,7 +19,7 @@ license: bsd
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
-name: Dicom-DCMTK-DCMDump-Simple
+name: Dicom-DCMTK-DCMDump-Get
 no_index:
   directory:
     - examples
