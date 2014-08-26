@@ -4,7 +4,9 @@ TODO
 2. Resit nepritomnost dcmdump programu. Asi nejaka check metoda.
 3. Resit spatny dicom file.
 4. Do konstruktoru dat parametry dcmdump.
-5.
+5. Zjistit, jestli dcmdump umi +U8 option. Pokud ano, tak pouzivat. a vracet
+   string utf8.
+6.
 
 Applied
 =======
