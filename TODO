@@ -1,6 +1,7 @@
 TODO
 ====
 1. Testy.
+   - Hlavne kodovani. Potreboval bych mit na vystupu konzistentni data.
 2. Resit nepritomnost dcmdump programu. Asi nejaka check metoda.
 3. Resit spatny dicom file.
 4. Do konstruktoru dat parametry dcmdump.
