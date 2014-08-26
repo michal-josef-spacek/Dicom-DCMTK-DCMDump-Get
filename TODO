@@ -3,7 +3,8 @@ TODO
 1. Testy.
 2. Resit nepritomnost dcmdump programu. Asi nejaka check metoda.
 3. Resit spatny dicom file.
-4.
+4. Do konstruktoru dat parametry dcmdump.
+5.
 
 Applied
 =======
