@@ -7,7 +7,7 @@ use inc::Module::Install;
 
 # Definition.
 abstract 'Perl Class for getting DICOM DCMTK dcmdump output for DICOM file.';
-author 'Michal Špaček <skim@cpan.org>';
+author 'Michal Spacek <skim@cpan.org>';
 license 'bsd';
 name 'Dicom-DCMTK-DCMDump-Get';
 readme_from 'Get.pm';
