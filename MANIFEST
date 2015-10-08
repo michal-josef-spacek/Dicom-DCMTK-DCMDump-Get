@@ -2,6 +2,8 @@ Changes
 examples/ex1.pl
 Get.pm
 inc/Module/Install.pm
+inc/Module/Install/AuthorRequires.pm
+inc/Module/Install/AuthorTests.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm
 inc/Module/Install/Fetch.pm
@@ -16,8 +18,8 @@ MANIFEST			This list of files
 META.yml
 README
 SIGNATURE
-t/Dicom-DCMTK-DCMDump-Get/00-use.t
-t/Dicom-DCMTK-DCMDump-Get/01-version.t
-t/Dicom-DCMTK-DCMDump-Get/02-pod_coverage.t
-t/Dicom-DCMTK-DCMDump-Get/03-pod.t
-t/Dicom-DCMTK-DCMDump-Get/04-new.t
+t/Dicom-DCMTK-DCMDump-Get/01-use.t
+t/Dicom-DCMTK-DCMDump-Get/02-version.t
+t/Dicom-DCMTK-DCMDump-Get/03-new.t
+xt/Dicom-DCMTK-DCMDump-Get/01-pod_coverage.t
+xt/Dicom-DCMTK-DCMDump-Get/02-pod.t
