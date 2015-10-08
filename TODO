@@ -7,6 +7,8 @@ TODO
 4. Do konstruktoru dat parametry dcmdump.
 5. Zjistit, jestli dcmdump umi +U8 option. Pokud ano, tak pouzivat. a vracet
    string utf8.
+Je otazkou, jestli tohle je spravne?
+Pak by nemel byt parametr 'encoding', ale 'utf8' => 0/1
 6.
 
 Applied
